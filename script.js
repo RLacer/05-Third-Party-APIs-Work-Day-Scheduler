@@ -1,6 +1,43 @@
 
 var timeDisplayEl = $('#time-display');
+$(document).ready(function (){
+  $(".btn").on("click", function() {
+    var value = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
 
+    localStorage.setItem(time, value);
+    $(".notification").addClass("show");
+
+    setTimeout(function () {
+            $(".notification").removeClass("show");
+        }, 1000);
+  } )
+
+function hourUpdate() {
+  var currentHour = moment().hours();
+
+  $(".time-block").each(function (){
+    var hour = parseInt($(this).attr("id").split("-")[1]);
+   if (hour < currentHour){
+    $(this).addClass("past");
+       } else if (hour === currentHour){
+         $(this).removeClass("past");
+         $(this).addClass("present");
+       } else{
+        $(this).removeClass("past present");
+        $(this).addClass("future");
+       }
+   })
+}
+
+hourUpdate();
+
+var interval = setInterval(hourUpdate, 60000);
+
+$("#hour-9 .description").val(localStorage.getItem("hour-9"));
+
+
+} )
 
 
 
