@@ -6,9 +6,7 @@
 
 * When opening the planner, the current date and time are displayed at the top of the page.
 
-* There are color coded time blocks for business hours that indicate past, present and future hours. 
-
-* An incorrect answer subtracts time from the timer.
+* There are color coded time blocks that indicate past, present and future business hours. 
 
 * Clicking on a timebock allows the user to enter text.
 
@@ -19,7 +17,7 @@
 
 
 ## Link to Website
-https://rlacer.github.io/04-Web-API-CODE-QUIZ/
+https://rlacer.github.io/05-Third-Party-APIs-Work-Day-Scheduler/
 
 
 ## Screenshot
