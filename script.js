@@ -5,7 +5,7 @@ function displayDate() {
   var rightNow = moment().format('MMM DD, YYYY [-] hh:mm a');
   dateDisplayEl.text(rightNow);
 }
-setInterval(displayDate, 1000);
+setInterval(displayDate, 200);
 
 $(document).ready(function (){
   $(".btn").on("click", function() {
